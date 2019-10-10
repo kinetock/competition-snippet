@@ -1,3 +1,3 @@
 # competition-snippet
 
-競技プログラミングで使えそうなsnippet
+競技プログラミングで使えそうなPython3系のsnippet
