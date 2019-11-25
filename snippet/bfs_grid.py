@@ -17,13 +17,13 @@ def bfs(grid, sy, sx, target, wall):
             grid[y_][x_] = wall
     return False
 
-H,W = map(int, input().split())
+h,w = map(int, input().split())
 gy,gx = map(int, input().split())
 wall = '#'
 start='s'
-edges = [wall for i in range(W+2) ]
+edges = [wall for i in range(w+2) ]
 grid = [edges]
-for i in range(1,H+1):
+for i in range(1,h+1):
     S = [wall]+list(input().strip())+[wall]
     if 's' in S:
         sy,sx=i,S.index('s')
