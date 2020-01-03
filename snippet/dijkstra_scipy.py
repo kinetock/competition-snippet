@@ -8,6 +8,8 @@ route = [[0 for i in range(N)] for j in range(N)]
 for i in range(M):
     a,b,c = map(int, input().split())
     route[a-1][b-1] = route[b-1][a-1] = c
+
+# 要素はfloat なので注意
 p_route = di(route)
 
 mn = float('INF')

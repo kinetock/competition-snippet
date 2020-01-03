@@ -1,6 +1,7 @@
 from itertools import accumulate
 
-def run_length(data, init):
+def run_length(data, init=''):
+    length = []
     tmp = init
     cnt = 0
     for c in data:
