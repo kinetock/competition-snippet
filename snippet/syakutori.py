@@ -1,18 +1,22 @@
-n,k = map(int, input().split())
+# https://atcoder.jp/contests/abc098/tasks/arc098_b
+
+n = int(input())
 a = list(map(int, input().split()))
 
 cnt = 0
 right = 0
-sum_val = 0
-for left in range(n+1):
-    while sum_val < k:
-        if right == n:
+acc = a[0]
+xor = a[0]
+for left in range(n):
+    while right < n:
+        if right + 1 >= n or acc + a[right+1] != xor ^ a[right+1]:
             break
-        else:
-            right += 1
-            sum_val += a[right]
-    if sum_val < k:
-        break
-    cnt += (n - right + 1)
-    sum_val -= a[left]
+        right += 1
+        acc += a[right]
+        xor ^= a[right]
+    if acc == xor:
+        # print(left, right, acc, xor, cnt, right - left + 1)
+        cnt += (right - left + 1)
+    acc -= a[left]
+    xor ^= a[left]
 print(cnt)
