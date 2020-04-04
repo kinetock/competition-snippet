@@ -6,14 +6,14 @@ inf = float('inf')
 
 def dijkstra(ad_lst, n, s):
     costs = [inf for i in range(n+1)]
-    costs[s], Q = 0, []
-    heapq.heappush(Q, [costs[s], s])
+    costs[s], q = 0, []
+    heapq.heappush(q, [costs[s], s])
 
-    while(Q != []):
-        c, u = heapq.heappop(Q)
+    while(q != []):
+        c, u = heapq.heappop(q)
         for v, c in ad_lst[u].items():
             if costs[u] + c < costs[v]:
-                heapq.heappush(Q, [costs[u] + c, v])
+                heapq.heappush(q, [costs[u] + c, v])
                 costs[v] = costs[u] + c
     return costs
 

@@ -25,8 +25,8 @@ edges = [wall for i in range(w+2) ]
 grid = [edges]
 for i in range(1,h+1):
     S = [wall]+list(input().strip())+[wall]
-    if 's' in S:
-        sy,sx=i,S.index('s')
+    if start in S:
+        sy,sx=i,S.index(start)
     grid.append(S)
 grid.append(edges)
 

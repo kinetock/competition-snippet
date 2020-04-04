@@ -3,7 +3,7 @@ from collections import deque
 def dfs(graph, start, goal):
     stack = deque()
     push, pop = stack.append, stack.pop
-    visited = [False for i in range(N)]
+    visited = [False for i in range(n)]
     push(start)
     visited[start] = True
     
@@ -18,10 +18,10 @@ def dfs(graph, start, goal):
                 push(b)
     return False
 
-N,M = map(int, input().split())
+n,m = map(int, input().split())
 graph = {}
 bridge = []
-for i in range(M):
+for i in range(m):
     a,b = map(int, input().split())
     if a not in graph:
         graph[a] = {}
