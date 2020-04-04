@@ -1,18 +1,18 @@
-N,K = map(int, input().split())
-A = list(map(int, input().split()))
+n,k = map(int, input().split())
+a = list(map(int, input().split()))
 
 cnt = 0
 right = 0
 sum_val = 0
-for left in range(N+1):
-    while sum_val < K:
-        if right == N:
+for left in range(n+1):
+    while sum_val < k:
+        if right == n:
             break
         else:
             right += 1
-            sum_val += A[right]
-    if sum_val < K:
+            sum_val += a[right]
+    if sum_val < k:
         break
-    cnt += (N - right + 1)
-    sum_val -= A[left]
+    cnt += (n - right + 1)
+    sum_val -= a[left]
 print(cnt)
