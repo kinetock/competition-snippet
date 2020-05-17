@@ -5,3 +5,7 @@ exam/
 virtual.py
 test.py
 .vscode
+
+contest.py
+unit_test.py
+
