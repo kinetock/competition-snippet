@@ -1,7 +1,7 @@
+__pycache__/
+exam/
 *.pdf
 *.sh
 virtual.py
 test.py
 .vscode
-exam*
-
